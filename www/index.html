@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Hello wasm-pack!</title>
+  </head>
+  <style>
+    body {
+      background: #1f2639;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #container {
+      display: flex;
+    }
+
+    #sidebar {
+      display: flex;
+      align-items: end;
+    }
+
+    #train {
+      background-color: white;
+      border: 0;
+      font-size: 2.4rem;
+      padding: 0.6rem 1.2rem;
+    }
+  </style>
+  <body>
+    <div id="container">
+      <div id="sidebar">
+        <button id="train">Train</button>
+      </div>
+      <canvas id="viewport" width="800px" height="800px"></canvas>
+    </div>
+    <noscript
+      >This page contains webassembly and javascript content, please enable
+      javascript in your browser.</noscript
+    >
+    <script src="./bootstrap.js"></script>
+  </body>
+</html>

@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>Hello wasm-pack!</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shorelark</title>
   </head>
+  <style>
+    body {
+      background: #1f2639;
+    }
+  </style>
   <body>
-    <noscript>This page contains webassembly and javascript content, please enable javascript in your browser.</noscript>
     <script src="./bootstrap.js"></script>
+    <div id="container">
+      <div id="sidebar"></div>
+      <canvas id="viewport"></canvas>
+    </div>
   </body>
 </html>
