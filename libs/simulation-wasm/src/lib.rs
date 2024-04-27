@@ -26,6 +26,10 @@ impl Simulation {
         self.sim.step(&mut self.rng);
     }
 
+    pub fn choose_best(&mut self) {
+        self.sim.choose_best(&mut self.rng)
+    }
+
     pub fn train(&mut self) -> String {
         let stats = self.sim.train(&mut self.rng);
 

@@ -90,3 +90,8 @@ redraw();
 document.getElementById('train').onclick = function () {
   console.log(simulation.train());
 };
+
+document.getElementById('choose-best').onclick = function () {
+  console.log('Best birds were chosen!');
+  simulation.choose_best();
+};

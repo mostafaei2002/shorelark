@@ -126,4 +126,33 @@ impl Simulation {
 
         stats
     }
+
+    pub fn choose_best(&mut self, rng: &mut dyn RngCore) {
+        assert!(self.world.animals.len() > 1);
+
+        let mut top_chromosome = Animal::random(rng).as_chromosome();
+        let mut top_satiation = 0;
+
+        for animal in &self.world.animals {
+            if animal.satiation > top_satiation {
+                top_chromosome = animal.as_chromosome();
+                top_satiation = animal.satiation;
+            }
+        }
+
+        let new_animals: Vec<Animal> = (0..40)
+            .map(|_| {
+                let eye = Eye::default();
+                let brain = Brain::from_chromosome(top_chromosome.clone(), &eye);
+
+                Animal::new(eye, brain, rng)
+            })
+            .collect();
+
+        self.world.animals = new_animals;
+
+        for food in &mut self.world.foods {
+            food.position = rng.gen();
+        }
+    }
 }

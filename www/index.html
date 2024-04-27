@@ -26,17 +26,26 @@
       align-items: end;
     }
 
-    #train {
+    .btn {
       background-color: white;
       border: 0;
       font-size: 2.4rem;
       padding: 0.6rem 1.2rem;
     }
+
+    .btns {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
   </style>
   <body>
     <div id="container">
       <div id="sidebar">
-        <button id="train">Train</button>
+        <div class="btns">
+          <button class="btn" id="choose-best">Choose Best</button>
+          <button class="btn" id="train">Train</button>
+        </div>
       </div>
       <canvas id="viewport" width="800px" height="800px"></canvas>
     </div>

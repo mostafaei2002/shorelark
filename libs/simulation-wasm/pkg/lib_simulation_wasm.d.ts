@@ -40,6 +40,9 @@ export class Simulation {
 */
   step(): void;
 /**
+*/
+  choose_best(): void;
+/**
 * @returns {string}
 */
   train(): string;

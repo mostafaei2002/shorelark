@@ -5,6 +5,7 @@ export function __wbg_simulation_free(a: number): void;
 export function simulation_new(): number;
 export function simulation_world(a: number): number;
 export function simulation_step(a: number): void;
+export function simulation_choose_best(a: number): void;
 export function simulation_train(a: number, b: number): void;
 export function __wbg_world_free(a: number): void;
 export function __wbg_get_world_animals(a: number, b: number): void;

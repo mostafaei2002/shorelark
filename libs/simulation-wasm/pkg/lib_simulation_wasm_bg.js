@@ -275,6 +275,11 @@ export class Simulation {
         wasm.simulation_step(this.__wbg_ptr);
     }
     /**
+    */
+    choose_best() {
+        wasm.simulation_choose_best(this.__wbg_ptr);
+    }
+    /**
     * @returns {string}
     */
     train() {
